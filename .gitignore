@@ -1,1 +1,4 @@
-target/classes target/generated-sources target/lucene-indexer target/lucene-indexer.war target/m2e-wtp target/maven-archiver target/maven-status target/test-classes
+target/**
+.classpath
+.project
+.settings/**
