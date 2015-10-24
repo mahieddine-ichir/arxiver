@@ -1,0 +1,41 @@
+
+<label>Search Arxives</label>
+<div class="input-group">
+		<input type="text" class="form-control" placeholder="Enter your search terms ..." ng-model="criteria" />
+	<!--	<span class="glyphicon glyphicon-search" />-->
+	<span class="input-group-btn"><a class="btn btn-primary" ng-click="search(criteria)">Search</a></span>
+</div>
+
+<div class="alert alert-info hints" role="alert">
+Hints
+	<ul>
+		<li>use wildcard <code>my_search*</code> to query all beginning with my_search</li>
+		<li>use <code>my_search1 my_search2 /and</code> to query a AND search</li>
+		<li>use <code>my_search1 my_search2 /or</code> to query a OR search</li>
+	</ul>
+</div>
+
+<div ng-show="data" class="results">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="panel-title">
+				Search results (found {{data.length}})
+				<span class="pull-right">
+					filter results
+				<input type="text" ng-model="resultsFilter" placeholder="filter results..." />
+				</span>
+			</div>
+		</div>		
+		<div class="result" ng-class="{even: $index%2==0}" ng-repeat="d in data | filter:resultsFilter">			
+			<div class="result-title"><a ng-href="api/arxiv/{{d.id}}" target="_blank">{{d.name}}</a></div>
+			<div class="result-body">
+				<div class="result-date">{{d.date | date:'MMM d, y HH:mm:ss'}}</div>
+				<!-- 
+				<div class="result-tags">
+					<b>Tags</b> <span ng-repeat="t in d.tags"><a ng-click="search(t)">{{t}}</a><span ng-hide="false"> - </span></span>
+				</div>
+				 -->
+			</div>
+		</div>
+	</div>
+</div>

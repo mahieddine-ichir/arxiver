@@ -1,0 +1,51 @@
+.container {
+	margin-top: 50px;
+}
+
+.results {
+	margin-top: 20px;
+}
+
+.result {
+	margin-top: 10px;	
+}
+.even {
+	/*background-color: rgb(240, 240, 240);*/
+}
+.result .result-title {
+	color: #1a0dab;
+	font-size: x-large;
+	margin-left: 5px;
+}
+.result .result-title a:hover {
+	text-decoration: underline; 
+}
+
+.result .result-body {
+	margin-top: 2px;
+	margin-left: 10px;	
+}
+
+.result-date {
+	color: #006621;
+	font-style: italic;
+}
+.result-tags {
+	font-size: small;	
+}
+#div-drop {
+	height: 100px;
+	border: solid 1px;
+}
+#file{
+	display: none;
+}
+#droparea {
+	background-color: rgb(255, 255, 240);
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+}
+#droparea.hover {
+	border: dashed 1px;
+}
