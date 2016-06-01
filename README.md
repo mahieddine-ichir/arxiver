@@ -18,3 +18,4 @@ This application is an EDM application featuring
 # Features of the current version
 * Indexing: this version, only PDF and MS Word Documents are supported
 
+# Testing CI integrations
